@@ -60,7 +60,7 @@ class Bookings(models.Model):
     completed = models.BooleanField(default=False)
 
     class Meta:
-        # Order by booking_date and then booking_time 
+        # Order by booking_date and booking_time 
         ordering = ['booking_date', 'booking_time']
 
     def __str__(self):
