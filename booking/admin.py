@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import MenuItem, Bookings
+from .models import MenuItem, Booking
 from django_summernote.admin import SummernoteModelAdmin
 
 
@@ -12,9 +12,9 @@ class MenuItemAdmin(SummernoteModelAdmin):
     summernote_fields = ('content',)
 
 
-@admin.register(Bookings)
+@admin.register(Booking)
 class BookingAdmin(admin.ModelAdmin):
-    # Class to view bookings on admin panel 
+    # Class to view bookings on admin panel
     list_display = (
         'pk',
         'customer',
