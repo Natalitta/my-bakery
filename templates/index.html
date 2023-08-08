@@ -4,48 +4,39 @@
 
 <div class="container-fluid">
     <div class="row">
-        <h1>Hello</h1>
+        
         <!-- Menu Item Entries Column -->
-        <div class="col-12 mt-3 left">
+        <div class="col-12 mt-3">
             <div class="row">
                 {% for menu_item in object_list %}
-                <h2>Cakes</h2>                
+                <h2>{{ menu_item.type }}</h2>  
                 <div class="col-md-4">
                     <div class="card mb-4">
                         <div class="card-body">
                             <a href="#" class="menu-link">
                                 <h2 class="card-title">{{ menu_item.title }}</h2>
+                                <img class="card-img-top" src=" {{ menu_item.featured_image.url }}">
                                 <p class="card-text">{{ menu_item.description }}</p>
                                 <p>
                                     {% if menu_item.vegan %}
-                                    *Vegan*
+                                    <span id='vegan'>Vegan</span>
                                     {% endif %}
                                 </p>
                             </a>
                         </div>
                     </div>                
                 </div>
-                <h2>Pastry</h2>
-                <div class="col-md-4">
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <a href="#" class="menu-link">
-                                <h2 class="card-title">{{ menu_item.title }}</h2>
-                                <p class="card-text">{{ menu_item.description }}</p>
-                                <p>
-                                    {% if menu_item.vegan %}
-                                    *Vegan*
-                                    {% endif %}
-                                </p>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+            {% if forloop.counter|divisibleby:3 %}
             </div>
-            {% endfor %}
+            <div class="row">
+            {% endif %}
+            {% if forloop.last %}
+            </div>
+            {% endif %}
+                {% endfor %}
+            </div>   
         </div>
     </div>
 </div>
 
-{{ menu_item.title }}
 {%endblock%}
