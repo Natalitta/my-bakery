@@ -14,7 +14,7 @@ class MenuDetail(View):
 
     def get(self, request, *args, **kwargs):
         queryset = MenuItem.objects.all
-        menu_item = get_object_or_404(queryset, title=title)
+        menu_item = get_object_or_404(queryset, title=menu_item.title)
 
         return render(
             request,
