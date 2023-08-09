@@ -13,15 +13,20 @@
                 <div class="col-md-4">
                     <div class="card mb-4">
                         <div class="card-body">
-                            <a href="#" class="menu-link">
+                            <a href="../booking.html" class="menu-link">
                                 <h2 class="card-title">{{ menu_item.title }}</h2>
                                 <img class="card-img-top" src=" {{ menu_item.featured_image.url }}">
                                 <p class="card-text">{{ menu_item.description }}</p>
                                 <p>
                                     {% if menu_item.vegan %}
-                                    <span id='vegan'>Vegan</span>
+                                    <span id='vegan'>*Vegan</span>
                                     {% endif %}
                                 </p>
+                                {% if user.is_authenticated %}
+                                    <button class="btn order" type="button">
+                                        Order                                    
+                                    </button>
+                                {% endif %}
                             </a>
                         </div>
                     </div>                
