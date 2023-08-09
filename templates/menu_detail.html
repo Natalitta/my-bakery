@@ -1,0 +1,43 @@
+{% extends 'base.html' %} {% block content %}
+{% load crispy_forms_tags %}
+
+<div class="masthead">
+    <div class="container">
+        <div class="row g-0">
+            <h1 class="menu-item-title">{{ menu_item.title }}</h1>
+            <div class="d-none d-md-block col-md-6 masthead-image">
+                <!-- The featured image -->
+                <img src=" {{ menu_item.featured_image.url }}" width="100%">
+            </div>
+            <div>
+                <!-- Menu item description and price -->
+                <p class="menu-item-description">{{ menu_item.description }}</p>
+                <p>{{ menu_item.price }}</p> 
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-4 card mb-4  mt-3 ">
+        <div class="card-body">
+            {% if booked %}
+            <div class="alert alert-success" role="alert">
+                Your orber is awaiting approval
+            </div>
+            {% else %}
+            {% if user.is_authenticated %}
+            <h3>Place your order:</h3>
+            <p>Ordering as: {{ user.username }}</p>
+            <form method="post" style="margin-top: 1.3em;">
+                {{ comment_form | crispy }}
+                {% csrf_token %}
+                <button type="submit" class="btn btn-signup btn-lg">Submit</button>
+            </form>
+            {% endif %}
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
