@@ -25,3 +25,8 @@ nav .brand{
     border: solid 1px white;
     border-radius: 10px;
 }
+.span-link {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
