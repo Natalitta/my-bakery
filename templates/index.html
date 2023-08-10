@@ -3,30 +3,33 @@
 {% block content %}
 
 <div class="container-fluid">
-    <h1 class="text-uppercase">menu</h1>
+    <h1 class="text-uppercase text-center">menu</h1>
     <div class="row">
-        
+        <h2 class="fw-bold">{{ menu_item.type }}</h2>
         <!-- Menu Item Entries Column -->
         <div class="col-12 mt-3">
-            <div class="row">
+            <div class="row">  
                 {% for menu_item in object_list %}
-                <h2>{{ menu_item.type }}</h2>  
                 <div class="col-md-4">
-                    <div class="card mb-4">
+                    <div class="card text-center mb-4">
                         <div class="card-body">
-                            <a href="#" class="menu-link">
+                            <a href="#" class="menu-link text-reset">
                                 <h2 class="card-title">{{ menu_item.title }}</h2>
                                 <img class="card-img-top" src=" {{ menu_item.featured_image.url }}">
-                                <p class="card-text">{{ menu_item.description }}</p>
-                                <p>
-                                    {% if menu_item.vegan %}
-                                    <span id='vegan'>*Vegan</span>
-                                    {% endif %}
-                                </p>
+                                <div style="height: 100px">
+                                    <p class="card-text">{{ menu_item.description }}</p>
+                                    <p>
+                                        {% if menu_item.vegan %}
+                                        <span id='vegan'>*Vegan</span>
+                                        {% endif %}
+                                    </p>
+                                </div>
                                 {% if user.is_authenticated %}
-                                    <button class="btn order" type="button">
+                                <div class="d-grid gap-2 col-6 mx-auto">
+                                    <button class="btn btn-primary" type="button">
                                         Order                                    
                                     </button>
+                                </div>
                                 {% endif %}
                             </a>
                         </div>
