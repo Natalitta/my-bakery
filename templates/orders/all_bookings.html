@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block css %}
+{{ block.super }}
+<link rel="stylesheet" href="{% static 'booking/css/datepicker.css' %}">
+{% endblock %}
+
+<!-- All Bookings view -->
+{% block content %}
+
+<a href="/edit">
+    <button class="btn btn-primary" id="order-btn" type="button">
+        Update your order
+    </button>
+</a>
+{% endblock %}
+
+{% block extra_js %}
+<script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="https://code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
+
+{% endblock %}

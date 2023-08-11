@@ -12,11 +12,11 @@
 <div class="m-3">
     <form method="POST" action="{% url 'booking' %}" class="form mb-2 p-2 form-style"
         enctype="multipart/form-data">
-        <h1 class="text-center">Order a cake</h1>
+        <h1 class="text-center">Update your order</h1>
         {{ form | crispy }}
         {{ form.media }}
         {% csrf_token %}
-        <button type="submit" class="btn form-style">Submit the Order</button>
+        <button type="submit" class="btn form-style">Save</button>
     </form>
 </div>
 
