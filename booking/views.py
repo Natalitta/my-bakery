@@ -6,19 +6,19 @@ from .forms import BookingForm
 
 class MenuList(generic.ListView):
     model = MenuItem
-    queryset = MenuItem.objects.order_by("type")
+    queryset = MenuItem.objects.order_by("title")
     template_name = "index.html"
 
 
 class MenuDetail(View):
 
     def get(self, request, *args, **kwargs):
-        queryset = MenuItem.objects.all
-        menu_item = get_object_or_404(queryset, title=menu_item.title)
+        queryset = MenuItem.objects.all()
+        menu_item = get_object_or_404(queryset,)
 
         return render(
             request,
-            "menu_detail.html",
+            "booking/menu_detail.html",
             {
                 "menu_item": menu_item,
                 "booking_form": BookingForm()

@@ -6,9 +6,9 @@ from django_summernote.admin import SummernoteModelAdmin
 @admin.register(MenuItem)
 class MenuItemAdmin(SummernoteModelAdmin):
 
-    list_display = ('title', 'type', 'vegan')
+    list_display = ('title', 'vegan')
     search_fields = ['title', 'content']
-    list_filter = ('type', 'vegan')
+    list_filter = ('vegan',)
     summernote_fields = ('content',)
 
 
