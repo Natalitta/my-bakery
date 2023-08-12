@@ -7,25 +7,27 @@
 <link rel="stylesheet" href="{% static 'booking/css/datepicker.css' %}">
 {% endblock %}
 
-<!-- Booking form -->
+<!-- Confirmation form -->
 {% block content %}
-<div class="m-3">
-    <form method="POST" action="{% url 'booking' %}" class="form mb-2 p-2 form-style"
-        enctype="multipart/form-data">
-        <h1 class="text-center">Order a cake</h1>
-        {{ form | crispy }}
-        {{ form.media }}
+<div class="form-style text-center p-3 m-3">
+    <h1 class="text-center">Confirm you'd like to cancel your order</h1>
+    <form method="post">
         {% csrf_token %}
-        <button type="submit" class="btn form-style">Submit the Order</button>
+        <p>Are you sure you want to delete your order: "{{ object.pk }}"?</p>
+        <p>Name: {{ object.booking_name }}</p>
+        <p>Table: {{ object.booked_item }}</p>
+        <p>Date: {{ object.booking_date }}</p>
+        <br>
+        <p>If not you can edit your order: 
+            <a href="{% url 'booking' %}">
+                <button class="btn btn-primary" id="order-btn" type="button">
+                    Update your order
+                </button>
+            </a>
+        </p>
+
+        <input type="submit" value="Confirm" class="btn" id="order-btn" >
     </form>
 </div>
 
-{% endblock %}
-
-{% block extra_js %}
-<script src="https://code.jquery.com/jquery-1.9.1.js"></script>
-<script src="https://code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
-<script>
-    $('.datepicker').datepicker();
-</script>
 {% endblock %}

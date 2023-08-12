@@ -14,19 +14,13 @@ class MenuList(generic.ListView):
     template_name = "index.html"
 
 
-def New(request):
-    model = Booking
-    template_name = "new.html"
-    return render(request, 'new.html')
-
-
 class Order(LoginRequiredMixin, CreateView):
 
     form_class = BookingForm
     template_name = 'booking.html'
-    # success_url = "all_bookings"
+    success_url = 'all_bookings'
     model = Booking
-
+    
     def form_valid(self, form):
         return super(Order, self).form_valid(form)
 
@@ -45,7 +39,7 @@ class BookingsList(LoginRequiredMixin, ListView):
 class EditBooking(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     form_class = BookingForm
     template_name = 'edit_booking.html'
-    success_url = "/orders/all_bookings"
+    success_url = "all_bookings"
     model = Booking
 
     def form_valid(self, form):
@@ -58,7 +52,8 @@ class EditBooking(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
 
 class DeleteBooking(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     model = Booking
-    success_url = "/booking/all_bookings"
+    template_name = 'confirm_delete.html'
+    success_url = "all_bookings"
 
     def form_valid(self, form):
         messages.success(

@@ -26,7 +26,7 @@ class BookingAdmin(admin.ModelAdmin):
         'completed'
         )
     search_fields = ['pk', 'completed', 'booked_item', 'customer__username']
-    list_filter = ('completed', 'booked_item', 'booking_time', 'booking_date')
+    list_filter = ('completed', 'booked_item', 'booking_time', 'booking_date','home_delivery')
     actions = ['mark_completed']
 
     def mark_completed(self, request, queryset):
