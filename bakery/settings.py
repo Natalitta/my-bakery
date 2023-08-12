@@ -33,7 +33,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = True
 
 ALLOWED_HOSTS = ['almond-bakery-app-1e713498d5b2.herokuapp.com',
-'8000-natalitta-my-bakery-4ghx6gi5uz.us2.codeanyapp.com']
+                 '8000-natalitta-my-bakery-ri82znjpes.us2.codeanyapp.com']
 
 
 # Application definition
