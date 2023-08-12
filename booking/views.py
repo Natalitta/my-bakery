@@ -14,10 +14,17 @@ class MenuList(generic.ListView):
     template_name = "index.html"
 
 
+def New(request):
+    model = Booking
+    template_name = "new.html"
+    return render(request, 'new.html')
+
+
 class Order(LoginRequiredMixin, CreateView):
+
     form_class = BookingForm
-    template_name = 'orders/booking.html'
-    success_url = "/orders/all_bookings/"
+    template_name = 'booking.html'
+    # success_url = "all_bookings"
     model = Booking
 
     def form_valid(self, form):
@@ -26,7 +33,7 @@ class Order(LoginRequiredMixin, CreateView):
 
 class BookingsList(LoginRequiredMixin, ListView):
     model = Booking
-    template_name = 'orders/all_bookings.html'
+    template_name = 'all_bookings.html'
 
     def get_queryset(self):
         return Booking.objects.filter(
@@ -37,7 +44,7 @@ class BookingsList(LoginRequiredMixin, ListView):
 
 class EditBooking(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     form_class = BookingForm
-    template_name = 'orders/edit_booking.html'
+    template_name = 'edit_booking.html'
     success_url = "/orders/all_bookings"
     model = Booking
 
