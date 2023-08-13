@@ -1,39 +1,62 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Almond Bakery 
+Almond Bakery is a bakery located in Cahersiveen, Ireland. The app is a bakery booking system aimed at allowing the owner to easily manage the menu and bookings. Customers can view the menu and also order a cake for a special ocasion with the help of a simple, easy to use booking system, they can also manage or cancel their reservations. The live link is here:
 
-Welcome,
+https://almond-bakery-app-1e713498d5b2.herokuapp.com/
 
-This is the Code Institute student template for Codeanywhere. If you are using Gitpod then you need [this template](https://github.com/Code-Institute-Org/gitpod-full-template) instead.  We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+# User-Experience-Design
+## Site-Goals
+The site is designed for admin to easily manage the menu and keep track of upcoming bookings.
+Also the site provides customers with an opportunity to order what they want and if they'd like a take-away or a delivery on a certain day. Moreover, they can update or cancel their bookings.
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Codeanywhere and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **July 26th, 2023**
+## Agile Planning
 
-## Codeanywhere Reminders
+This project was developed using Agile. All features were assigned to epics and user stories with the labels, Must have, should have, could have. "Must have" user stories were completed first, then "should haves" and finally "could have" ones, so that the site can start functioning as soon as possible.
+The Kanban board was created in GitHub projects.
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere, in the terminal, type:
+## Epics:
 
-`python3 -m http.server`
+The project had 5 main Epics (Milestones):
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+### EPIC 1: Basic Setup
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere with no-cache, you can use this alias for `python3 -m http.server`.
+The basic setup epic includes all stories for the basic application setup, the crucial one. 
 
-`http_server`
+Stories:
+* As a developer, I need to create the base.html page template so that other pages can use it too.
+* As a developer, I need to create static resources so that images, css and javascript work on the website.
+* As a developer, I need to create the navbar so that users can easily navigate the website.
+* As a developer, I need to create the footer so that users can get social media links and contact information.
+* As a developer, I need to set up the project so that it is ready for implementing the core features.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+### EPIC 2: Main Features
+This epic includes all main fetures of the site.
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+Stories:
+* As an owner, I would like a have a home page so that customers can view information about my cafe.
+* As an owner, I would like a have a menu page so that customers can view the menu and choose what they'd like to order.
+* As an owner, I would like a have a booking page so that customers can order any menu items.
+  
+### EPIC 3 - Menu
 
-In Codeanywhere you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+The menu epic includes all stories that relate to creating, deleting, editing and viewing of menu items. This allows viewing the menu for customers and for staff to manage them.
 
-To log into the Heroku toolbelt CLI:
+Stories:
+* As a staff, I want to be able to create a new menu when we have new offers.
+* As a user, I would like to be able to view menus so that I can decide if I would like to go there.
+* As a staff, I want to be able to edit the menu.
+* As a staff, I would like to receive feedback when I create or update menus so that I can see they have worked.
+* As a staff, I want to be able to delete a menu when it is no longer used.
 
-1. Log in to your Heroku account and go to _Account Settings_ in the menu under your avatar.
-2. Scroll down to the _API Key_ and click _Reveal_
-3. Copy the key
-4. In Codeanywhere, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+### EPIC 4 - Booking
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+The booking epic is for all stories that relate to creating, viewing, updating and deleting bookings. This allows the admin to easily view upcoming bookings, manage the bookings and also for customers to book and manage their orders.
 
----
+### EPIC 5 - Deployment 
 
-Happy coding!
+This epic includes all stories related to deploying the app to heroku and documentation necessary for the software development lifecycle of the application.
+
+Stories and tasks:
+
+* As a developer, I must deploy the project to heroku so that customers can use it.
+* Complete readme documentation.
+* Complete testing documentation.
