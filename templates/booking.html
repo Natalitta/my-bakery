@@ -23,28 +23,10 @@
         {{ form | crispy }}
         {{ form.media }}
         {{ form.date }}
-        <body>
-
-            <input id="datetimepicker" type="text">
-            
-            <script>
-              $(function () {
-                $("#datetimepicker").datetimepicker();
-              });
-            </script>
+        
         <br>
         <button type="submit" class="btn" id="order-btn">Submit the Order</button>
     </form>
 </div>
 
-{% endblock %}
-
-{% block extra_js %}
-<script>
-  $(function () {
-    $("#id_date").datetimepicker({
-      format: 'd/m/Y H:i',
-    });
-  });
-</script>
 {% endblock %}
