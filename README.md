@@ -60,3 +60,27 @@ Stories and tasks:
 * As a developer, I must deploy the project to heroku so that customers can use it.
 * Complete readme documentation.
 * Complete testing documentation.
+
+## CREDITS
+### Tutorials
+* Code Institute - I think therefore I blog
+* https://stackoverflow.com/ - Datepicker in django
+
+### Media
+strawberry cake
+Photo by <a href="https://unsplash.com/@sannka?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Alexandra Khudyntseva</a> on <a href="https://unsplash.com/photos/hXqbSgOPjSI?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+
+black forest cake
+Photo by <a href="https://unsplash.com/@jacob225?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Jacob Thomas</a> on <a href="https://unsplash.com/photos/6jHpcBPw7i8?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+ 
+Lemon tart
+Photo by <a href="https://unsplash.com/@alexlvrs?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Alex Lvrs</a> on <a href="https://unsplash.com/photos/aX_ljOOyWJY?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+  
+Chocolate
+https://www.freepik.com/free-photo/chocolate-cake-with-chocolate-sprinkles_6384459.htm#query=cake&position=28&from_view=search&track=sph >Image by Racool_studio on Freepik
+
+Napoleon
+https://www.freepik.com/free-photo/delicious-homemade-napoleon-cake-top-view_9491050.htm#query=cake%20napoleon&position=42&from_view=search&track=ais >Image by azerbaijan_stockers on Freepik
+
+Chocolate almond
+Image by https://www.freepik.com/free-photo/front-view-delicious-chocolate-cake-concept_11753940.htm#page=5&query=cake&position=7&from_view=search&track=sph>Freepik
